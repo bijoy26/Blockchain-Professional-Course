@@ -1,0 +1,41 @@
+$ geth			 //log of a running geth instance
+$ mkdir blockchain
+$ cd blockchain
+
+$ touch genesis.json		// create the genesis node
+
+$ geth -datadir=./new init genesis.json		//Initialise the genesis file (-datadir specifies Data directory for the databases and keystore)
+
+
+//      FOLLOWING COMMAND STARTS THE BLOCKCHAIN (NODE)
+//	This command includes admin, miner, gives your private blockchain network id and port number
+//	and also creates one miner to mine your private blockchain.
+//
+// 	--networkid  : Assigns a network identifier to the private blockchain (integer, 1=Frontier, 2=Morden (disused), 3=Ropsten, 4=Rinkeby) (default: 1)
+// 	--rpc  : Enable the HTTP-RPC server (that comes with GETH)
+// 	--rpcaddr  : HTTP-RPC server listening interface (default: "localhost")
+// 	--rpcport  : TTP-RPC server listening port (default: 8545)
+// 	--rpcapi : API's offered over the HTTP-RPC interface
+// 	----rpccorsdomain : Comma separated list of domains from which to accept cross origin requests (browser enforced) (value can be "http://websiteaddress.com" or wildcard "*")
+//	
+//	COMBINED COMMAND
+$ geth  --datadir new/ --networkid 989899 --http --http.addr 0.0.0.0 --http.port 8545 --http.api db,net,web3,admin,eth,miner,personal --http.corsdomain "*"
+//	DEPRECATED COMMAND
+$ geth  --datadir ./new --networkid 989899 --rpc --rpcaddr 0.0.0.0 --rpcport 8545 --rpcapi db,net,web3,admin,eth,miner,personal --rpccorsdomain "*"
+
+
+// 'attach' starts an interactive JavaScript environment (connect to node)
+// Attach Geth to your console with the previously declared rpcport 
+// Use CMD for working with Geth Console
+
+$ geth attach http://0.0.0.0:8545	
+
+//
+Geth JS Console Commands -
+
+> Personal.newAccount('seed')	// create new account with a password
+> miner.start()
+> miner.stop()
+> eth.getBalance(eth.coinbase) //Wei
+> web3.fromWei(eth.getBalance(eth.coinbase),”ether”)
+> eth.sendTransaction({from: <AddrA> to: <AddrB> value, :web3.toWei(85,"ether")}) // it is Transfer some ether one account to another account		
