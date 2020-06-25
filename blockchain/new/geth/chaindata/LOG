@@ -129,3 +129,26 @@
 21:16:03.878812 db@open done T·92.8689ms
 22:10:08.543917 db@close closing
 22:10:08.549913 db@close done T·5.9959ms
+=============== Jun 26, 2020 (+06) ===============
+05:34:50.811939 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+05:34:50.838974 version@stat F·[2] S·1KiB[1KiB] Sc·[0.50]
+05:34:50.838974 db@open opening
+05:34:50.839978 journal@recovery F·1
+05:34:50.843971 journal@recovery recovering @24
+05:34:50.893493 memdb@flush created L0@26 N·1 S·197B "Fas..mit,v19":"Fas..mit,v19"
+05:34:50.907554 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+05:34:50.994127 db@janitor F·5 G·0
+05:34:50.994127 db@open done T·155.1529ms
+05:34:53.645562 db@close closing
+05:34:53.650558 db@close done T·4.9967ms
+=============== Jun 26, 2020 (+06) ===============
+05:36:16.795346 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+05:36:16.795346 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+05:36:16.795346 db@open opening
+05:36:16.795346 journal@recovery F·1
+05:36:16.797343 journal@recovery recovering @27
+05:36:16.800342 version@stat F·[3] S·1KiB[1KiB] Sc·[0.75]
+05:36:16.878226 db@janitor F·5 G·0
+05:36:16.878226 db@open done T·82.8804ms
+05:39:14.523397 db@close closing
+05:39:14.535393 db@close done T·11.9964ms
